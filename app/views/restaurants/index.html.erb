@@ -1,0 +1,16 @@
+<!-- Displays All Restaurants -->
+
+<h1>Restaurants</h1>
+
+<ul class="list-inline card">
+  <% @restaurants.each do |restaurant| %>
+  <li><%= link_to restaurant.name, restaurants_path(restaurant) %></li>
+  <li>Address: <%= restaurant.address%></li>
+  <li>Phone number: <%= restaurant.phone_number%></li>
+  <li>Category: <%= restaurant.category%></li>
+  <% end %>
+</ul>
+
+<div>
+  <%= link_to "Add a new restaurant", new_restaurant_path, class: "btn btn-primary" %>
+</div>

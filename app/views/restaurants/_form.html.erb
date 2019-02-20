@@ -1,0 +1,14 @@
+<div class="form-group">
+  <%= form_for(restaurant) do |f| %>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+
+    <%= f.label :address %>
+    <%= f.text_field :address %>
+
+    <%= f.label :category %>
+    <%= f.text_field :category %>
+</div>
+
+  <%= f.submit "Add a restaurant", class: "btn btn-primary" %>
+<% end %>
